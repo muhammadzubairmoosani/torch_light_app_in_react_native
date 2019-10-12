@@ -1,8 +1,14 @@
 import React from 'react';
 import styles from './style.js';
-import { Text, View, Image, Linking } from 'react-native';
-import env from './images/env.png';
-import git from './images/git2.png';
+import envelopeIcon from './images/env.png';
+import gitIcon from './images/git2.png';
+import {
+    Text,
+    View,
+    Image,
+    Linking
+} from 'react-native';
+
 export default class SideBar extends React.Component {
     render() {
         return (
@@ -15,9 +21,7 @@ export default class SideBar extends React.Component {
                     <Text>A simple web-app calculate zakat.</Text>
                     <Text>Developer Info</Text>
                     <Text>Name: Muhammad Zubair Moosani</Text>
-                    <Image source={env} />
-
-                    {/* <i className="far fa-envelope" style={styles.icon}></i> */}
+                    <Image source={envelopeIcon} />
                     <Text
                         onPress={() => {
                             return Linking.openURL('mailto:mailto:muhammadzubairmoosani@gmail.com?subject=abcdefg&body=body')
@@ -25,9 +29,8 @@ export default class SideBar extends React.Component {
                         muhammadzubairmoosani@gmail.com
                     </Text>
                     <Text>Visit Link:</Text>
-                    <Image source={git} />
+                    <Image source={gitIcon} />
 
-                    {/* <i className="fab fa-github" style={styles.icon}></i> */}
                     <Text onPress={() => {
                         return Linking.openURL('https://www.github.com/muhammadzubairmoosani')
                     }} target="_blank">
